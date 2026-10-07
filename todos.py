@@ -16,6 +16,9 @@ def add_todo(todos, title):
     预期：如果 title 已经存在，不要重复添加，并返回 False。
     现在：无脑 append，所以 main.py 里会出现两条一模一样的任务。
     """
+    for todo in todos:
+        if todo["title"] == title:
+            return False
     todos.append({"id": len(todos) + 1, "title": title, "completed": False})
     return True
 
@@ -30,7 +33,7 @@ def list_todos(todos):
         return
 
     for todo in todos:
-        mark = "[ ]" if todo["completed"] else "[x]"
+        mark = "[x]" if todo["completed"] else "[ ]"
         print(f"  {todo['id']}. {mark} {todo['title']}")
 
 
@@ -41,7 +44,7 @@ def complete_todo(todos, todo_id):
     用的是 Python 内置函数 id，所以永远匹配不上，函数永远返回 False。
     """
     for todo in todos:
-        if todo["id"] == id:
+        if todo_id == todo["id"]:
             todo["completed"] = True
             return True
     return False
