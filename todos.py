@@ -44,7 +44,7 @@ def complete_todo(todos, todo_id):
     用的是 Python 内置函数 id，所以永远匹配不上，函数永远返回 False。
     """
     for todo in todos:
-        if todo["id"] == id:
+        if todo_id == todo["id"]:
             todo["completed"] = True
             return True
     return False
