@@ -33,7 +33,7 @@ def list_todos(todos):
         return
 
     for todo in todos:
-        mark = "[ ]" if todo["completed"] else "[x]"
+        mark = "[x]" if todo["completed"] else "[ ]"
         print(f"  {todo['id']}. {mark} {todo['title']}")
 
 
