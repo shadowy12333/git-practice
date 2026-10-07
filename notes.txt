@@ -1,0 +1,9 @@
+给未来的自己看的笔记
+
+- git status 看到 "untracked" 不是坏事，它只是说"这个文件我还没管"
+- 改完文件先 git diff，确认改的是我想改的地方，再 git add
+- git add 之后还能反悔：git restore --staged 文件名
+- 提交信息不要写 "update"，写清楚"改了什么、为什么"
+- 每次提交只做一件事，这样出问题才好回退
+
+（这个文件随便改，它是用来练 git diff 的。）
